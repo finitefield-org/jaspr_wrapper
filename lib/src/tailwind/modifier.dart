@@ -34,4 +34,13 @@ extension TailwindClassAttrExtension on TailwindClassAttr {
   }
 }
 
-const group = TailwindClassAttr('group');
+final allModifiers = <String, TailwindClassAttr Function(TailwindClassAttr)>{
+  'sm': (t) => t.sm,
+  'md': (t) => t.md,
+  'lg': (t) => t.lg,
+  'hover': (t) => t.hover,
+  'active': (t) => t.active,
+  'dark': (t) => t.dark,
+  'focusVisible': (t) => t.focusVisible,
+  'groupHover': (t) => t.groupHover,
+};

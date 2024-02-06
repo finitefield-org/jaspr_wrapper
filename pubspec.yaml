@@ -1,14 +1,16 @@
 name: jaspr_wrapper
 description: Wrapper of jaspr for type lovers.
-version: 0.3.0
+version: 0.4.0
 repository: https://github.com/finitefield-org/jaspr_wrapper
 
 environment:
   sdk: ^3.2.5
 
 dependencies:
+  build: ^2.4.1
   jaspr: ^0.10.0
 
 dev_dependencies:
+  build_runner: ^2.4.8
   lints: ^2.1.0
   test: ^1.24.0
