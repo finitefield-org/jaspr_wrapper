@@ -36,3 +36,7 @@ class AltAttr extends BasicAttr {
 class LabelAttr extends BasicAttr {
   const LabelAttr(String value) : super('label', value);
 }
+
+class RoleAttr extends BasicAttr {
+  const RoleAttr(String value) : super('role', value);
+}

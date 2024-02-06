@@ -5,3 +5,6 @@
 ## 0.2.0
 - Added IdAttr.
 
+## 0.3.0
+- Added RoleAttr.
+
