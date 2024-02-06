@@ -19,14 +19,14 @@ class Audio extends DomComponent {
       Preload? preload,
       String? src,
       Key? key,
-      String? id,
+      IdAttr? id,
       Set<Attr>? attrs,
       Styles? styles,
       Map<String, EventCallback>? events})
       : super(
           tag: 'audio',
           key: key,
-          id: id,
+          id: id?.value,
           classes: _attrsToClasses(attrs),
           styles: styles,
           attributes: {
@@ -60,17 +60,17 @@ class Img extends DomComponent {
       int? width,
       int? height,
       MediaLoading? loading,
-      required String src,
+      required SrcAttr src,
       ReferrerPolicy? referrerPolicy,
       Key? key,
-      String? id,
+      IdAttr? id,
       Set<Attr>? attrs,
       Styles? styles,
       Map<String, EventCallback>? events})
       : super(
           tag: 'img',
           key: key,
-          id: id,
+          id: id?.value,
           classes: _attrsToClasses(attrs),
           styles: styles,
           attributes: {
@@ -80,7 +80,7 @@ class Img extends DomComponent {
             if (width != null) 'width': '$width',
             if (height != null) 'height': '$height',
             if (loading != null) 'loading': loading.value,
-            'src': src,
+            'src': src.value,
             if (referrerPolicy != null) 'referrerpolicy': referrerPolicy.value,
           },
           events: events,
@@ -112,14 +112,14 @@ class Video extends DomComponent {
       int? width,
       int? height,
       Key? key,
-      String? id,
+      IdAttr? id,
       Set<Attr>? attrs,
       Styles? styles,
       Map<String, EventCallback>? events})
       : super(
           tag: 'video',
           key: key,
-          id: id,
+          id: id?.value,
           classes: _attrsToClasses(attrs),
           styles: styles,
           attributes: {
@@ -148,24 +148,24 @@ class Video extends DomComponent {
 /// - [height]: The displayed height of the resource, in CSS pixels.
 class Embed extends DomComponent {
   Embed(
-      {required String src,
+      {required SrcAttr src,
       String? type,
       int? width,
       int? height,
       Key? key,
-      String? id,
+      IdAttr? id,
       Set<Attr>? attrs,
       Styles? styles,
       Map<String, EventCallback>? events})
       : super(
           tag: 'embed',
           key: key,
-          id: id,
+          id: id?.value,
           classes: _attrsToClasses(attrs),
           styles: styles,
           attributes: {
             ..._attrsToAttributesMap(attrs),
-            'src': src,
+            'src': src.value,
             if (type != null) 'type': type,
             if (width != null) 'width': '$width',
             if (height != null) 'height': '$height',
@@ -187,7 +187,7 @@ class Embed extends DomComponent {
 /// - [height]: The height of the frame in CSS pixels. Default is 150.
 class IFrame extends DomComponent {
   IFrame(List<Component> children,
-      {required String src,
+      {required SrcAttr src,
       String? allow,
       String? csp,
       MediaLoading? loading,
@@ -197,19 +197,19 @@ class IFrame extends DomComponent {
       int? width,
       int? height,
       Key? key,
-      String? id,
+      IdAttr? id,
       Set<Attr>? attrs,
       Styles? styles,
       Map<String, EventCallback>? events})
       : super(
           tag: 'iframe',
           key: key,
-          id: id,
+          id: id?.value,
           classes: _attrsToClasses(attrs),
           styles: styles,
           attributes: {
             ..._attrsToAttributesMap(attrs),
-            'src': src,
+            'src': src.value,
             if (allow != null) 'allow': allow,
             if (csp != null) 'csp': csp,
             if (loading != null) 'loading': loading.value,
@@ -239,14 +239,14 @@ class ObjectElem extends DomComponent {
       int? width,
       int? height,
       Key? key,
-      String? id,
+      IdAttr? id,
       Set<Attr>? attrs,
       Styles? styles,
       Map<String, EventCallback>? events})
       : super(
           tag: 'object',
           key: key,
-          id: id,
+          id: id?.value,
           classes: _attrsToClasses(attrs),
           styles: styles,
           attributes: {
@@ -273,14 +273,14 @@ class Source extends DomComponent {
       {String? type,
       String? src,
       Key? key,
-      String? id,
+      IdAttr? id,
       Set<Attr>? attrs,
       Styles? styles,
       Map<String, EventCallback>? events})
       : super(
           tag: 'source',
           key: key,
-          id: id,
+          id: id?.value,
           classes: _attrsToClasses(attrs),
           styles: styles,
           attributes: {

@@ -7,14 +7,14 @@ class Details extends DomComponent {
   Details(List<Component> children,
       {bool? open,
       Key? key,
-      String? id,
+      IdAttr? id,
       Set<Attr>? attrs,
       Styles? styles,
       Map<String, EventCallback>? events})
       : super(
           tag: 'details',
           key: key,
-          id: id,
+          id: id?.value,
           classes: _attrsToClasses(attrs),
           styles: styles,
           attributes: {
@@ -33,14 +33,14 @@ class Dialog extends DomComponent {
   Dialog(List<Component> children,
       {bool? open,
       Key? key,
-      String? id,
+      IdAttr? id,
       Set<Attr>? attrs,
       Styles? styles,
       Map<String, EventCallback>? events})
       : super(
           tag: 'dialog',
           key: key,
-          id: id,
+          id: id?.value,
           classes: _attrsToClasses(attrs),
           styles: styles,
           attributes: {
@@ -56,14 +56,14 @@ class Dialog extends DomComponent {
 class Summary extends DomComponent {
   Summary(List<Component> children,
       {Key? key,
-      String? id,
+      IdAttr? id,
       Set<Attr>? attrs,
       Styles? styles,
       Map<String, EventCallback>? events})
       : super(
           tag: 'summary',
           key: key,
-          id: id,
+          id: id?.value,
           classes: _attrsToClasses(attrs),
           styles: styles,
           attributes: _attrsToAttributesMap(attrs),
@@ -80,24 +80,24 @@ class Summary extends DomComponent {
 /// - [as]: This attribute is only used when rel="preload" or rel="prefetch" has been set on the &lt;link&gt; element. It specifies the type of content being loaded by the &lt;link&gt;, which is necessary for request matching, application of correct content security policy, and setting of correct Accept request header. Furthermore, rel="preload" uses this as a signal for request prioritization.
 class Link extends DomComponent {
   Link(
-      {required String href,
+      {required HrefAttr href,
       String? rel,
       String? type,
       String? as,
       Key? key,
-      String? id,
+      IdAttr? id,
       Set<Attr>? attrs,
       Styles? styles,
       Map<String, EventCallback>? events})
       : super(
           tag: 'link',
           key: key,
-          id: id,
+          id: id?.value,
           classes: _attrsToClasses(attrs),
           styles: styles,
           attributes: {
             ..._attrsToAttributesMap(attrs),
-            'href': href,
+            'href': href.value,
             if (rel != null) 'rel': rel,
             if (type != null) 'type': type,
             if (as != null) 'as': as,
@@ -125,23 +125,23 @@ class Script extends DomComponent {
   Script(List<Component> children,
       {bool? async,
       bool? defer,
-      required String src,
+      required SrcAttr src,
       Key? key,
-      String? id,
+      IdAttr? id,
       Set<Attr>? attrs,
       Styles? styles,
       Map<String, EventCallback>? events})
       : super(
           tag: 'script',
           key: key,
-          id: id,
+          id: id?.value,
           classes: _attrsToClasses(attrs),
           styles: styles,
           attributes: {
             ..._attrsToAttributesMap(attrs),
             if (async == true) 'async': '',
             if (defer == true) 'defer': '',
-            'src': src,
+            'src': src.value,
           },
           events: events,
           children: children,

@@ -13,6 +13,10 @@ class BasicAttr extends Attr {
   const BasicAttr(this.name, this.value);
 }
 
+class IdAttr extends BasicAttr {
+  const IdAttr(String value) : super('id', value);
+}
+
 class ClassAttr extends BasicAttr {
   const ClassAttr(String value) : super('class', value);
 }
@@ -27,4 +31,8 @@ class SrcAttr extends BasicAttr {
 
 class AltAttr extends BasicAttr {
   const AltAttr(String value) : super('alt', value);
+}
+
+class LabelAttr extends BasicAttr {
+  const LabelAttr(String value) : super('label', value);
 }

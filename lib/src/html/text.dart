@@ -24,25 +24,25 @@ part of 'html.dart';
 class A extends DomComponent {
   A(List<Component> children,
       {String? download,
-      required String href,
+      required HrefAttr href,
       Target? target,
       String? type,
       ReferrerPolicy? referrerPolicy,
       Key? key,
-      String? id,
+      IdAttr? id,
       Set<Attr>? attrs,
       Styles? styles,
       Map<String, EventCallback>? events})
       : super(
           tag: 'a',
           key: key,
-          id: id,
+          id: id?.value,
           classes: _attrsToClasses(attrs),
           styles: styles,
           attributes: {
             ..._attrsToAttributesMap(attrs),
             if (download != null) 'download': download,
-            'href': href,
+            'href': href.value,
             if (target != null) 'target': target.value,
             if (type != null) 'type': type,
             if (referrerPolicy != null) 'referrerpolicy': referrerPolicy.value,
@@ -56,14 +56,14 @@ class A extends DomComponent {
 class B extends DomComponent {
   B(List<Component> children,
       {Key? key,
-      String? id,
+      IdAttr? id,
       Set<Attr>? attrs,
       Styles? styles,
       Map<String, EventCallback>? events})
       : super(
           tag: 'b',
           key: key,
-          id: id,
+          id: id?.value,
           classes: _attrsToClasses(attrs),
           styles: styles,
           attributes: _attrsToAttributesMap(attrs),
@@ -76,14 +76,14 @@ class B extends DomComponent {
 class Br extends DomComponent {
   Br(
       {Key? key,
-      String? id,
+      IdAttr? id,
       Set<Attr>? attrs,
       Styles? styles,
       Map<String, EventCallback>? events})
       : super(
           tag: 'br',
           key: key,
-          id: id,
+          id: id?.value,
           classes: _attrsToClasses(attrs),
           styles: styles,
           attributes: _attrsToAttributesMap(attrs),
@@ -95,14 +95,14 @@ class Br extends DomComponent {
 class Code extends DomComponent {
   Code(List<Component> children,
       {Key? key,
-      String? id,
+      IdAttr? id,
       Set<Attr>? attrs,
       Styles? styles,
       Map<String, EventCallback>? events})
       : super(
           tag: 'code',
           key: key,
-          id: id,
+          id: id?.value,
           classes: _attrsToClasses(attrs),
           styles: styles,
           attributes: _attrsToAttributesMap(attrs),
@@ -115,14 +115,14 @@ class Code extends DomComponent {
 class Em extends DomComponent {
   Em(List<Component> children,
       {Key? key,
-      String? id,
+      IdAttr? id,
       Set<Attr>? attrs,
       Styles? styles,
       Map<String, EventCallback>? events})
       : super(
           tag: 'em',
           key: key,
-          id: id,
+          id: id?.value,
           classes: _attrsToClasses(attrs),
           styles: styles,
           attributes: _attrsToAttributesMap(attrs),
@@ -135,14 +135,14 @@ class Em extends DomComponent {
 class I extends DomComponent {
   I(List<Component> children,
       {Key? key,
-      String? id,
+      IdAttr? id,
       Set<Attr>? attrs,
       Styles? styles,
       Map<String, EventCallback>? events})
       : super(
           tag: 'i',
           key: key,
-          id: id,
+          id: id?.value,
           classes: _attrsToClasses(attrs),
           styles: styles,
           attributes: _attrsToAttributesMap(attrs),
@@ -155,14 +155,14 @@ class I extends DomComponent {
 class S extends DomComponent {
   S(List<Component> children,
       {Key? key,
-      String? id,
+      IdAttr? id,
       Set<Attr>? attrs,
       Styles? styles,
       Map<String, EventCallback>? events})
       : super(
           tag: 's',
           key: key,
-          id: id,
+          id: id?.value,
           classes: _attrsToClasses(attrs),
           styles: styles,
           attributes: _attrsToAttributesMap(attrs),
@@ -175,14 +175,14 @@ class S extends DomComponent {
 class Small extends DomComponent {
   Small(List<Component> children,
       {Key? key,
-      String? id,
+      IdAttr? id,
       Set<Attr>? attrs,
       Styles? styles,
       Map<String, EventCallback>? events})
       : super(
           tag: 'small',
           key: key,
-          id: id,
+          id: id?.value,
           classes: _attrsToClasses(attrs),
           styles: styles,
           attributes: _attrsToAttributesMap(attrs),
@@ -195,14 +195,14 @@ class Small extends DomComponent {
 class Span extends DomComponent {
   Span(List<Component> children,
       {Key? key,
-      String? id,
+      IdAttr? id,
       Set<Attr>? attrs,
       Styles? styles,
       Map<String, EventCallback>? events})
       : super(
           tag: 'span',
           key: key,
-          id: id,
+          id: id?.value,
           classes: _attrsToClasses(attrs),
           styles: styles,
           attributes: _attrsToAttributesMap(attrs),
@@ -215,14 +215,14 @@ class Span extends DomComponent {
 class Strong extends DomComponent {
   Strong(List<Component> children,
       {Key? key,
-      String? id,
+      IdAttr? id,
       Set<Attr>? attrs,
       Styles? styles,
       Map<String, EventCallback>? events})
       : super(
           tag: 'strong',
           key: key,
-          id: id,
+          id: id?.value,
           classes: _attrsToClasses(attrs),
           styles: styles,
           attributes: _attrsToAttributesMap(attrs),
@@ -235,14 +235,14 @@ class Strong extends DomComponent {
 class U extends DomComponent {
   U(List<Component> children,
       {Key? key,
-      String? id,
+      IdAttr? id,
       Set<Attr>? attrs,
       Styles? styles,
       Map<String, EventCallback>? events})
       : super(
           tag: 'u',
           key: key,
-          id: id,
+          id: id?.value,
           classes: _attrsToClasses(attrs),
           styles: styles,
           attributes: _attrsToAttributesMap(attrs),

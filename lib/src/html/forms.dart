@@ -14,14 +14,14 @@ class Button extends DomComponent {
     ButtonType? type,
     VoidCallback? onClick,
     Key? key,
-    String? id,
+    IdAttr? id,
     Set<Attr>? attrs,
     Styles? styles,
     Map<String, EventCallback>? events,
   }) : super(
           tag: 'button',
           key: key,
-          id: id,
+          id: id?.value,
           classes: _attrsToClasses(attrs),
           styles: styles,
           attributes: {
@@ -59,14 +59,14 @@ class Form extends DomComponent {
       bool? noValidate,
       Target? target,
       Key? key,
-      String? id,
+      IdAttr? id,
       Set<Attr>? attrs,
       Styles? styles,
       Map<String, EventCallback>? events})
       : super(
           tag: 'form',
           key: key,
-          id: id,
+          id: id?.value,
           classes: _attrsToClasses(attrs),
           styles: styles,
           attributes: {
@@ -101,14 +101,14 @@ class Input extends DomComponent {
       ValueChanged<dynamic>? onInput,
       ValueChanged<dynamic>? onChange,
       Key? key,
-      String? id,
+      IdAttr? id,
       Set<Attr>? attrs,
       Styles? styles,
       Map<String, EventCallback>? events})
       : super(
           tag: 'input',
           key: key,
-          id: id,
+          id: id?.value,
           classes: _attrsToClasses(attrs),
           styles: styles,
           attributes: {
@@ -133,14 +133,14 @@ class Label extends DomComponent {
   Label(List<Component> children,
       {String? htmlFor,
       Key? key,
-      String? id,
+      IdAttr? id,
       Set<Attr>? attrs,
       Styles? styles,
       Map<String, EventCallback>? events})
       : super(
           tag: 'label',
           key: key,
-          id: id,
+          id: id?.value,
           classes: _attrsToClasses(attrs),
           styles: styles,
           attributes: {
@@ -156,14 +156,14 @@ class Label extends DomComponent {
 class DataList extends DomComponent {
   DataList(List<Component> children,
       {Key? key,
-      String? id,
+      IdAttr? id,
       Set<Attr>? attrs,
       Styles? styles,
       Map<String, EventCallback>? events})
       : super(
           tag: 'datalist',
           key: key,
-          id: id,
+          id: id?.value,
           classes: _attrsToClasses(attrs),
           styles: styles,
           attributes: _attrsToAttributesMap(attrs),
@@ -176,14 +176,14 @@ class DataList extends DomComponent {
 class Legend extends DomComponent {
   Legend(List<Component> children,
       {Key? key,
-      String? id,
+      IdAttr? id,
       Set<Attr>? attrs,
       Styles? styles,
       Map<String, EventCallback>? events})
       : super(
           tag: 'legend',
           key: key,
-          id: id,
+          id: id?.value,
           classes: _attrsToClasses(attrs),
           styles: styles,
           attributes: _attrsToAttributesMap(attrs),
@@ -209,14 +209,14 @@ class Meter extends DomComponent {
       double? high,
       double? optimum,
       Key? key,
-      String? id,
+      IdAttr? id,
       Set<Attr>? attrs,
       Styles? styles,
       Map<String, EventCallback>? events})
       : super(
           tag: 'meter',
           key: key,
-          id: id,
+          id: id?.value,
           classes: _attrsToClasses(attrs),
           styles: styles,
           attributes: {
@@ -242,14 +242,14 @@ class Progress extends DomComponent {
       {double? value,
       double? max,
       Key? key,
-      String? id,
+      IdAttr? id,
       Set<Attr>? attrs,
       Styles? styles,
       Map<String, EventCallback>? events})
       : super(
           tag: 'progress',
           key: key,
-          id: id,
+          id: id?.value,
           classes: _attrsToClasses(attrs),
           styles: styles,
           attributes: {
@@ -268,22 +268,22 @@ class Progress extends DomComponent {
 /// - [disabled]: If this attribute is set, none of the items in this option group is selectable. Often browsers grey out such control and it won't receive any browsing events, like mouse clicks or focus-related ones.
 class OptGroup extends DomComponent {
   OptGroup(List<Component> children,
-      {required String label,
+      {required LabelAttr label,
       bool? disabled,
       Key? key,
-      String? id,
+      IdAttr? id,
       Set<Attr>? attrs,
       Styles? styles,
       Map<String, EventCallback>? events})
       : super(
           tag: 'optgroup',
           key: key,
-          id: id,
+          id: id?.value,
           classes: _attrsToClasses(attrs),
           styles: styles,
           attributes: {
             ..._attrsToAttributesMap(attrs),
-            'label': label,
+            'label': label.value,
             if (disabled == true) 'disabled': '',
           },
           events: events,
@@ -304,14 +304,14 @@ class Option extends DomComponent {
       bool? selected,
       bool? disabled,
       Key? key,
-      String? id,
+      IdAttr? id,
       Set<Attr>? attrs,
       Styles? styles,
       Map<String, EventCallback>? events})
       : super(
           tag: 'option',
           key: key,
-          id: id,
+          id: id?.value,
           classes: _attrsToClasses(attrs),
           styles: styles,
           attributes: {
@@ -349,14 +349,14 @@ class Select extends DomComponent {
       ValueChanged<List<String>>? onInput,
       ValueChanged<List<String>>? onChange,
       Key? key,
-      String? id,
+      IdAttr? id,
       Set<Attr>? attrs,
       Styles? styles,
       Map<String, EventCallback>? events})
       : super(
           tag: 'select',
           key: key,
-          id: id,
+          id: id?.value,
           classes: _attrsToClasses(attrs),
           styles: styles,
           attributes: {
@@ -386,14 +386,14 @@ class FieldSet extends DomComponent {
       {String? name,
       bool? disabled,
       Key? key,
-      String? id,
+      IdAttr? id,
       Set<Attr>? attrs,
       Styles? styles,
       Map<String, EventCallback>? events})
       : super(
           tag: 'fieldset',
           key: key,
-          id: id,
+          id: id?.value,
           classes: _attrsToClasses(attrs),
           styles: styles,
           attributes: {
@@ -439,14 +439,14 @@ class TextArea extends DomComponent {
       ValueChanged<String>? onInput,
       ValueChanged<String>? onChange,
       Key? key,
-      String? id,
+      IdAttr? id,
       Set<Attr>? attrs,
       Styles? styles,
       Map<String, EventCallback>? events})
       : super(
           tag: 'textarea',
           key: key,
-          id: id,
+          id: id?.value,
           classes: _attrsToClasses(attrs),
           styles: styles,
           attributes: {

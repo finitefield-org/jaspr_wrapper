@@ -11,14 +11,14 @@ class Svg extends DomComponent {
       Unit? width,
       Unit? height,
       Key? key,
-      String? id,
+      IdAttr? id,
       Set<Attr>? attrs,
       Styles? styles,
       Map<String, EventCallback>? events})
       : super(
           tag: 'svg',
           key: key,
-          id: id,
+          id: id?.value,
           classes: _attrsToClasses(attrs),
           styles: styles,
           attributes: {
@@ -51,14 +51,14 @@ class Rect extends DomComponent {
       Color? stroke,
       String? strokeWidth,
       Key? key,
-      String? id,
+      IdAttr? id,
       Set<Attr>? attrs,
       Styles? styles,
       Map<String, EventCallback>? events})
       : super(
           tag: 'rect',
           key: key,
-          id: id,
+          id: id?.value,
           classes: _attrsToClasses(attrs),
           styles: styles,
           attributes: {
@@ -93,14 +93,14 @@ class Circle extends DomComponent {
       Color? stroke,
       String? strokeWidth,
       Key? key,
-      String? id,
+      IdAttr? id,
       Set<Attr>? attrs,
       Styles? styles,
       Map<String, EventCallback>? events})
       : super(
           tag: 'circle',
           key: key,
-          id: id,
+          id: id?.value,
           classes: _attrsToClasses(attrs),
           styles: styles,
           attributes: {
@@ -136,14 +136,14 @@ class Ellipse extends DomComponent {
       Color? stroke,
       String? strokeWidth,
       Key? key,
-      String? id,
+      IdAttr? id,
       Set<Attr>? attrs,
       Styles? styles,
       Map<String, EventCallback>? events})
       : super(
           tag: 'ellipse',
           key: key,
-          id: id,
+          id: id?.value,
           classes: _attrsToClasses(attrs),
           styles: styles,
           attributes: {
@@ -180,14 +180,14 @@ class Line extends DomComponent {
       Color? stroke,
       String? strokeWidth,
       Key? key,
-      String? id,
+      IdAttr? id,
       Set<Attr>? attrs,
       Styles? styles,
       Map<String, EventCallback>? events})
       : super(
           tag: 'line',
           key: key,
-          id: id,
+          id: id?.value,
           classes: _attrsToClasses(attrs),
           styles: styles,
           attributes: {
@@ -218,14 +218,14 @@ class Path extends DomComponent {
       Color? stroke,
       String? strokeWidth,
       Key? key,
-      String? id,
+      IdAttr? id,
       Set<Attr>? attrs,
       Styles? styles,
       Map<String, EventCallback>? events})
       : super(
           tag: 'path',
           key: key,
-          id: id,
+          id: id?.value,
           classes: _attrsToClasses(attrs),
           styles: styles,
           attributes: {
@@ -253,14 +253,14 @@ class Polygon extends DomComponent {
       Color? stroke,
       String? strokeWidth,
       Key? key,
-      String? id,
+      IdAttr? id,
       Set<Attr>? attrs,
       Styles? styles,
       Map<String, EventCallback>? events})
       : super(
           tag: 'polygon',
           key: key,
-          id: id,
+          id: id?.value,
           classes: _attrsToClasses(attrs),
           styles: styles,
           attributes: {
@@ -288,14 +288,14 @@ class Polyline extends DomComponent {
       Color? stroke,
       String? strokeWidth,
       Key? key,
-      String? id,
+      IdAttr? id,
       Set<Attr>? attrs,
       Styles? styles,
       Map<String, EventCallback>? events})
       : super(
           tag: 'polyline',
           key: key,
-          id: id,
+          id: id?.value,
           classes: _attrsToClasses(attrs),
           styles: styles,
           attributes: {
