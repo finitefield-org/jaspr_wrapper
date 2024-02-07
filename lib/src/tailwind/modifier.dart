@@ -1,76 +1,76 @@
 part of 'tailwind.dart';
 
-extension TailwindClassAttrExtension on TailwindClassAttr {
-  TailwindClassAttr get sm {
-    return TailwindClassAttr('sm:$value');
+extension TailwindAttrExtension on TailwindAttr {
+  TailwindAttr get sm {
+    return TailwindAttr('sm:$value');
   }
 
-  TailwindClassAttr get md {
-    return TailwindClassAttr('md:$value');
+  TailwindAttr get md {
+    return TailwindAttr('md:$value');
   }
 
-  TailwindClassAttr get lg {
-    return TailwindClassAttr('lg:$value');
+  TailwindAttr get lg {
+    return TailwindAttr('lg:$value');
   }
 
-  TailwindClassAttr get hover {
-    return TailwindClassAttr('hover:$value');
+  TailwindAttr get hover {
+    return TailwindAttr('hover:$value');
   }
 
-  TailwindClassAttr get active {
-    return TailwindClassAttr('active:$value');
+  TailwindAttr get active {
+    return TailwindAttr('active:$value');
   }
 
-  TailwindClassAttr get dark {
-    return TailwindClassAttr('dark:$value');
+  TailwindAttr get dark {
+    return TailwindAttr('dark:$value');
   }
 
-  TailwindClassAttr get focusVisible {
-    return TailwindClassAttr('focus-visible:$value');
+  TailwindAttr get focusVisible {
+    return TailwindAttr('focus-visible:$value');
   }
 
-  TailwindClassAttr get groupHover {
-    return TailwindClassAttr('group-hover:$value');
+  TailwindAttr get groupHover {
+    return TailwindAttr('group-hover:$value');
   }
 
-  TailwindClassAttr get opacity10 {
-    return TailwindClassAttr('$value/10');
+  TailwindAttr get opacity10 {
+    return TailwindAttr('$value/10');
   }
 
-  TailwindClassAttr get opacity20 {
-    return TailwindClassAttr('$value/20');
+  TailwindAttr get opacity20 {
+    return TailwindAttr('$value/20');
   }
 
-  TailwindClassAttr get opacity30 {
-    return TailwindClassAttr('$value/30');
+  TailwindAttr get opacity30 {
+    return TailwindAttr('$value/30');
   }
 
-  TailwindClassAttr get opacity40 {
-    return TailwindClassAttr('$value/40');
+  TailwindAttr get opacity40 {
+    return TailwindAttr('$value/40');
   }
 
-  TailwindClassAttr get opacity50 {
-    return TailwindClassAttr('$value/50');
+  TailwindAttr get opacity50 {
+    return TailwindAttr('$value/50');
   }
 
-  TailwindClassAttr get opacity60 {
-    return TailwindClassAttr('$value/60');
+  TailwindAttr get opacity60 {
+    return TailwindAttr('$value/60');
   }
 
-  TailwindClassAttr get opacity70 {
-    return TailwindClassAttr('$value/70');
+  TailwindAttr get opacity70 {
+    return TailwindAttr('$value/70');
   }
 
-  TailwindClassAttr get opacity80 {
-    return TailwindClassAttr('$value/80');
+  TailwindAttr get opacity80 {
+    return TailwindAttr('$value/80');
   }
 
-  TailwindClassAttr get opacity90 {
-    return TailwindClassAttr('$value/90');
+  TailwindAttr get opacity90 {
+    return TailwindAttr('$value/90');
   }
 }
 
-final allModifiers = <String, TailwindClassAttr Function(TailwindClassAttr)>{
+final allModifiers = <String, TailwindAttr Function(TailwindAttr)>{
   'sm': (t) => t.sm,
   'md': (t) => t.md,
   'lg': (t) => t.lg,

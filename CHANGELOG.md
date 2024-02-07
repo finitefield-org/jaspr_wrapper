@@ -8,3 +8,5 @@
 ## 0.3.0
 - Added RoleAttr.
 
+## 0.4.0
+- Added TailwindAttr.

@@ -5,18 +5,18 @@ import '../attr.dart';
 part 'modifier.dart';
 part 'tailwindcss.dart';
 
-class TailwindClassAttr extends ClassAttr {
-  const TailwindClassAttr(String value) : super(value);
+class TailwindAttr extends ClassAttr {
+  const TailwindAttr(String value) : super(value);
 }
 
-const group = TailwindClassAttr('group');
-const Z10 = TailwindClassAttr('-z-10');
-const Z20 = TailwindClassAttr('-z-20');
-const Z30 = TailwindClassAttr('-z-30');
-const Z40 = TailwindClassAttr('-z-40');
-const Z50 = TailwindClassAttr('-z-50');
+const group = TailwindAttr('group');
+const Z10 = TailwindAttr('-z-10');
+const Z20 = TailwindAttr('-z-20');
+const Z30 = TailwindAttr('-z-30');
+const Z40 = TailwindAttr('-z-40');
+const Z50 = TailwindAttr('-z-50');
 
-const allTailwindClassAttrs = <String, TailwindClassAttr>{
+const allTailwindAttrs = <String, TailwindAttr>{
   'group': group,
   'Z10': Z10,
   'Z20': Z20,

@@ -55,7 +55,7 @@ class Audio extends DomComponent {
 /// - [referrerPolicy]: Indicates which referrer to send when fetching the resource.
 class Img extends DomComponent {
   Img(
-      {String? alt,
+      {AltAttr? alt,
       CrossOrigin? crossOrigin,
       int? width,
       int? height,
@@ -75,7 +75,7 @@ class Img extends DomComponent {
           styles: styles,
           attributes: {
             ..._attrsToAttributesMap(attrs),
-            if (alt != null) 'alt': alt,
+            if (alt != null) 'alt': alt.value,
             if (crossOrigin != null) 'crossorigin': crossOrigin.value,
             if (width != null) 'width': '$width',
             if (height != null) 'height': '$height',

@@ -13,12 +13,11 @@ class TailwindBuilder implements Builder {
     var contents = await buildStep.readAsString(inputId);
     contents = contents.replaceAll('\n', '');
 
-    final attrs = List<TailwindClassAttr>.empty(growable: true);
-    for (final a in allTailwindClassAttrs.entries) {
+    final attrs = List<TailwindAttr>.empty(growable: true);
+    for (final a in allTailwindAttrs.entries) {
       if (contents.contains(a.key)) {
         attrs.add(a.value);
-        for (final b
-            in getModifiedTailwindClassAttr(contents, a.value, a.key)) {
+        for (final b in getModifiedTailwindAttr(contents, a.value, a.key)) {
           attrs.add(b);
         }
       }
@@ -42,12 +41,12 @@ class TailwindBuilder implements Builder {
   };
 }
 
-Iterable<TailwindClassAttr> getModifiedTailwindClassAttr(
-    String contents, TailwindClassAttr attr, String attrStr) sync* {
+Iterable<TailwindAttr> getModifiedTailwindAttr(
+    String contents, TailwindAttr attr, String attrStr) sync* {
   for (final m in allModifiers.entries) {
     if (contents.contains('$attrStr.${m.key}')) {
       yield m.value(attr);
-      yield* getModifiedTailwindClassAttr(
+      yield* getModifiedTailwindAttr(
           contents, m.value(attr), '$attrStr.${m.key}');
     }
   }
