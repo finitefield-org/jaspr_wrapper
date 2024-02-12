@@ -23,6 +23,11 @@ class TailwindBuilder implements Builder {
       }
     }
 
+    // If there is no tailwind attribute, don't write anything.
+    if (attrs.isEmpty) {
+      return;
+    }
+
     final outputId = AssetId(
       inputId.package,
       inputId.path

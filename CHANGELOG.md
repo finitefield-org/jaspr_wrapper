@@ -10,3 +10,6 @@
 
 ## 0.4.0
 - Added TailwindAttr.
+
+## 0.5.0
+- Do not generate file if there is no attributes.
