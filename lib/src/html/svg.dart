@@ -5,7 +5,7 @@ part of 'html.dart';
 /// - [viewBox]: The SVG viewport coordinates for the current SVG fragment.
 /// - [width]: The displayed width of the rectangular viewport. (Not the width of its coordinate system.)
 /// - [height]: The displayed height of the rectangular viewport. (Not the height of its coordinate system.)
-class Svg extends DomComponent {
+class Svg extends StaticDomComponent {
   Svg(List<Component> children,
       {String? viewBox,
       Unit? width,
@@ -41,7 +41,7 @@ class Svg extends DomComponent {
 /// - [fill]: The color (or gradient or pattern) used to paint the shape.
 /// - [stroke]: The color (or gradient or pattern) used to paint the outline of the shape.
 /// - [strokeWidth]: The width of the stroke to be applied to the shape.
-class Rect extends DomComponent {
+class Rect extends StaticDomComponent {
   Rect(List<Component> children,
       {required String x,
       required String y,
@@ -84,7 +84,7 @@ class Rect extends DomComponent {
 /// - [fill]: The color (or gradient or pattern) used to paint the shape.
 /// - [stroke]: The color (or gradient or pattern) used to paint the outline of the shape.
 /// - [strokeWidth]: The width of the stroke to be applied to the shape.
-class Circle extends DomComponent {
+class Circle extends StaticDomComponent {
   Circle(List<Component> children,
       {String? cx,
       String? cy,
@@ -126,7 +126,7 @@ class Circle extends DomComponent {
 /// - [fill]: The color (or gradient or pattern) used to paint the shape.
 /// - [stroke]: The color (or gradient or pattern) used to paint the outline of the shape.
 /// - [strokeWidth]: The width of the stroke to be applied to the shape.
-class Ellipse extends DomComponent {
+class Ellipse extends StaticDomComponent {
   Ellipse(List<Component> children,
       {String? cx,
       String? cy,
@@ -170,7 +170,7 @@ class Ellipse extends DomComponent {
 /// - [fill]: The color (or gradient or pattern) used to paint the shape.
 /// - [stroke]: The color (or gradient or pattern) used to paint the outline of the shape.
 /// - [strokeWidth]: The width of the stroke to be applied to the shape.
-class Line extends DomComponent {
+class Line extends StaticDomComponent {
   Line(List<Component> children,
       {String? x1,
       String? y1,
@@ -211,7 +211,7 @@ class Line extends DomComponent {
 /// - [fill]: The color (or gradient or pattern) used to paint the shape.
 /// - [stroke]: The color (or gradient or pattern) used to paint the outline of the shape.
 /// - [strokeWidth]: The width of the stroke to be applied to the shape.
-class Path extends DomComponent {
+class Path extends StaticDomComponent {
   Path(List<Component> children,
       {String? d,
       Color? fill,
@@ -246,7 +246,7 @@ class Path extends DomComponent {
 /// - [fill]: The color (or gradient or pattern) used to paint the shape.
 /// - [stroke]: The color (or gradient or pattern) used to paint the outline of the shape.
 /// - [strokeWidth]: The width of the stroke to be applied to the shape.
-class Polygon extends DomComponent {
+class Polygon extends StaticDomComponent {
   Polygon(List<Component> children,
       {String? points,
       Color? fill,
@@ -281,7 +281,7 @@ class Polygon extends DomComponent {
 /// - [fill]: The color (or gradient or pattern) used to paint the shape.
 /// - [stroke]: The color (or gradient or pattern) used to paint the outline of the shape.
 /// - [strokeWidth]: The width of the stroke to be applied to the shape.
-class Polyline extends DomComponent {
+class Polyline extends StaticDomComponent {
   Polyline(List<Component> children,
       {String? points,
       Color? fill,

@@ -9,7 +9,7 @@ part of 'html.dart';
 /// - [muted]: Indicates whether the audio will be initially silenced. Its default value is false.
 /// - [preload]: Provides a hint to the browser about what the author thinks will lead to the best user experience.
 /// - [src]: The URL of the audio to embed. This is subject to HTTP access controls. This is optional; you may instead use the &lt;source&gt; element within the audio block to specify the audio to embed.
-class Audio extends DomComponent {
+class Audio extends StaticDomComponent {
   Audio(List<Component> children,
       {bool? autoplay,
       bool? controls,
@@ -53,7 +53,7 @@ class Audio extends DomComponent {
 /// - [loading]: Indicates how the browser should load the image.
 /// - [src]: The image URL.
 /// - [referrerPolicy]: Indicates which referrer to send when fetching the resource.
-class Img extends DomComponent {
+class Img extends StaticDomComponent {
   Img(
       {AltAttr? alt,
       CrossOrigin? crossOrigin,
@@ -99,7 +99,7 @@ class Img extends DomComponent {
 /// - [src]: The URL of the video to embed. This is optional; you may instead use the &lt;source&gt; element within the video block to specify the video to embed.
 /// - [width]: The width of the video's display area, in CSS pixels.
 /// - [height]: The height of the video's display area, in CSS pixels.
-class Video extends DomComponent {
+class Video extends StaticDomComponent {
   Video(List<Component> children,
       {bool? autoplay,
       bool? controls,
@@ -146,7 +146,7 @@ class Video extends DomComponent {
 /// - [type]: The MIME type to use to select the plug-in to instantiate.
 /// - [width]: The displayed width of the resource, in CSS pixels.
 /// - [height]: The displayed height of the resource, in CSS pixels.
-class Embed extends DomComponent {
+class Embed extends StaticDomComponent {
   Embed(
       {required SrcAttr src,
       String? type,
@@ -185,7 +185,7 @@ class Embed extends DomComponent {
 /// - [referrerPolicy]: Indicates which referrer to send when fetching the frame's resource.
 /// - [width]: The width of the frame in CSS pixels. Default is 300.
 /// - [height]: The height of the frame in CSS pixels. Default is 150.
-class IFrame extends DomComponent {
+class IFrame extends StaticDomComponent {
   IFrame(List<Component> children,
       {required SrcAttr src,
       String? allow,
@@ -231,7 +231,7 @@ class IFrame extends DomComponent {
 /// - [type]: The content type of the resource specified by data. At least one of data and type must be defined.
 /// - [width]: The width of the displayed resource in CSS pixels.
 /// - [height]: The height of the displayed resource in CSS pixels.
-class ObjectElem extends DomComponent {
+class ObjectElem extends StaticDomComponent {
   ObjectElem(List<Component> children,
       {String? data,
       String? name,
@@ -268,7 +268,7 @@ class ObjectElem extends DomComponent {
 /// - [src]: Address of the media resource.
 ///
 ///   Required if the source element's parent is an &lt;audio&gt; and &lt;video&gt; element, but not allowed if the source element's parent is a &lt;picture&gt; element.
-class Source extends DomComponent {
+class Source extends StaticDomComponent {
   Source(
       {String? type,
       String? src,

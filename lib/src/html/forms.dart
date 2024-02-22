@@ -6,7 +6,7 @@ part of 'html.dart';
 /// - [disabled]: Prevents the user from interacting with the button: it cannot be pressed or focused.
 /// - [type]: The default behavior of the button.
 /// - [onClick]: Callback for the 'click' event.
-class Button extends DomComponent {
+class Button extends StaticDomComponent {
   Button(
     List<Component> children, {
     bool? autofocus,
@@ -49,7 +49,7 @@ class Button extends DomComponent {
 /// - [name]: The name of the form. The value must not be the empty string, and must be unique among the form elements in the forms collection that it is in, if any.
 /// - [noValidate]: Indicates that the form shouldn't be validated when submitted. If this attribute is not set (and therefore the form is validated), it can be overridden by a formnovalidate attribute on a &lt;button&gt;, &lt;input type="submit"&gt;, or &lt;input type="image"&gt; element belonging to the form.
 /// - [target]: Indicates where to display the response after submitting the form. In HTML 4, this is the name/keyword for a frame. In HTML5, it is a name/keyword for a browsing context (for example, tab, window, or iframe).
-class Form extends DomComponent {
+class Form extends StaticDomComponent {
   Form(List<Component> children,
       {String? action,
       FormMethod? method,
@@ -92,7 +92,7 @@ class Form extends DomComponent {
 /// - [disabled]: Indicates that the user should not be able to interact with the input. Disabled inputs are typically rendered with a dimmer color or using some other form of indication that the field is not available for use.
 /// - [onInput]: Callback for the 'input' event. The type of [value] depends on [type].
 /// - [onChange]: Callback for the 'change' event. The type of [value] depends on [type].
-class Input extends DomComponent {
+class Input extends StaticDomComponent {
   Input(List<Component> children,
       {InputType? type,
       String? name,
@@ -129,7 +129,7 @@ class Input extends DomComponent {
 /// The &lt;label&gt; HTML element represents a caption for an item in a user interface.
 ///
 /// - [htmlFor]: The value of the for attribute must be a single id for a labelable form-related element in the same document as the &lt;label&gt; element. So, any given label element can be associated with only one form control.
-class Label extends DomComponent {
+class Label extends StaticDomComponent {
   Label(List<Component> children,
       {String? htmlFor,
       Key? key,
@@ -153,7 +153,7 @@ class Label extends DomComponent {
 }
 
 /// The &lt;datalist&gt; HTML element contains a set of &lt;option&gt; elements that represent the permissible or recommended options available to choose from within other controls.
-class DataList extends DomComponent {
+class DataList extends StaticDomComponent {
   DataList(List<Component> children,
       {Key? key,
       IdAttr? id,
@@ -173,7 +173,7 @@ class DataList extends DomComponent {
 }
 
 /// The &lt;legend&gt; HTML element represents a caption for the content of its parent &lt;fieldset&gt;.
-class Legend extends DomComponent {
+class Legend extends StaticDomComponent {
   Legend(List<Component> children,
       {Key? key,
       IdAttr? id,
@@ -200,7 +200,7 @@ class Legend extends DomComponent {
 /// - [low]: The upper numeric bound of the low end of the measured range. This must be greater than the minimum value (min attribute), and it also must be less than the high value and maximum value (high attribute and max attribute, respectively), if any are specified. If unspecified, or if less than the minimum value, the low value is equal to the minimum value.
 /// - [high]: The lower numeric bound of the high end of the measured range. This must be less than the maximum value (max attribute), and it also must be greater than the low value and minimum value (low attribute and min attribute, respectively), if any are specified. If unspecified, or if greater than the maximum value, the high value is equal to the maximum value.
 /// - [optimum]: Indicates the optimal numeric value. It must be within the range (as defined by the min attribute and max attribute). When used with the low attribute and high attribute, it gives an indication where along the range is considered preferable. For example, if it is between the min attribute and the low attribute, then the lower range is considered preferred. The browser may color the meter's bar differently depending on whether the value is less than or equal to the optimum value.
-class Meter extends DomComponent {
+class Meter extends StaticDomComponent {
   Meter(List<Component> children,
       {double? value,
       double? min,
@@ -237,7 +237,7 @@ class Meter extends DomComponent {
 ///
 /// - [value]: This attribute specifies how much of the task that has been completed. It must be a valid floating point number between 0 and max, or between 0 and 1 if max is omitted. If there is no value attribute, the progress bar is indeterminate; this indicates that an activity is ongoing with no indication of how long it is expected to take.
 /// - [max]: This attribute describes how much work the task indicated by the progress element requires. The max attribute, if present, must have a value greater than 0 and be a valid floating point number. The default value is 1.
-class Progress extends DomComponent {
+class Progress extends StaticDomComponent {
   Progress(List<Component> children,
       {double? value,
       double? max,
@@ -266,7 +266,7 @@ class Progress extends DomComponent {
 ///
 /// - [label]: The name of the group of options, which the browser can use when labeling the options in the user interface.
 /// - [disabled]: If this attribute is set, none of the items in this option group is selectable. Often browsers grey out such control and it won't receive any browsing events, like mouse clicks or focus-related ones.
-class OptGroup extends DomComponent {
+class OptGroup extends StaticDomComponent {
   OptGroup(List<Component> children,
       {required LabelAttr label,
       bool? disabled,
@@ -297,7 +297,7 @@ class OptGroup extends DomComponent {
 /// - [value]: The content of this attribute represents the value to be submitted with the form, should this option be selected. If this attribute is omitted, the value is taken from the text content of the option element.
 /// - [selected]: Indicates that the option is initially selected. If the &lt;option&gt; element is the descendant of a &lt;select&gt; element whose multiple attribute is not set, only one single &lt;option&gt; of this &lt;select&gt; element may have the selected attribute.
 /// - [disabled]: If this attribute is set, this option is not checkable. Often browsers grey out such control and it won't receive any browsing event, like mouse clicks or focus-related ones. If this attribute is not set, the element can still be disabled if one of its ancestors is a disabled &lt;optgroup&gt; element.
-class Option extends DomComponent {
+class Option extends StaticDomComponent {
   Option(List<Component> children,
       {String? label,
       String? value,
@@ -337,7 +337,7 @@ class Option extends DomComponent {
 /// - [size]: If the control is presented as a scrolling list box (e.g. when multiple is specified), this attribute represents the number of rows in the list that should be visible at one time. Browsers are not required to present a select element as a scrolled list box. The default value is 0.
 /// - [onInput]: Callback for the 'input' event.
 /// - [onChange]: Callback for the 'change' event.
-class Select extends DomComponent {
+class Select extends StaticDomComponent {
   Select(List<Component> children,
       {String? name,
       bool? multiple,
@@ -381,7 +381,7 @@ class Select extends DomComponent {
 ///
 /// - [name]: The name associated with the group.
 /// - [disabled]: If this Boolean attribute is set, all form controls that are descendants of the &lt;fieldset&gt;, are disabled, meaning they are not editable and won't be submitted along with the &lt;form&gt;. They won't receive any browsing events, like mouse clicks or focus-related events. By default browsers display such controls grayed out. Note that form elements inside the &lt;legend&gt; element won't be disabled.
-class FieldSet extends DomComponent {
+class FieldSet extends StaticDomComponent {
   FieldSet(List<Component> children,
       {String? name,
       bool? disabled,
@@ -422,7 +422,7 @@ class FieldSet extends DomComponent {
 /// - [wrap]: Indicates how the control wraps text. If this attribute is not specified, soft is its default value.
 /// - [onInput]: Callback for the 'input' event.
 /// - [onChange]: Callback for the 'change' event.
-class TextArea extends DomComponent {
+class TextArea extends StaticDomComponent {
   TextArea(List<Component> children,
       {AutoComplete? autoComplete,
       bool? autofocus,

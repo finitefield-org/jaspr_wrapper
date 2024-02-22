@@ -3,7 +3,7 @@ part of 'html.dart';
 /// The &lt;details&gt; HTML element creates a disclosure widget in which information is visible only when the widget is toggled into an "open" state. A summary or label must be provided using the &lt;summary&gt; element.
 ///
 /// - [open]: Indicates whether or not the details — that is, the contents of the &lt;details&gt; element — are currently visible.
-class Details extends DomComponent {
+class Details extends StaticDomComponent {
   Details(List<Component> children,
       {bool? open,
       Key? key,
@@ -29,7 +29,7 @@ class Details extends DomComponent {
 /// The &lt;dialog&gt; HTML element represents a dialog box or other interactive component, such as a dismissible alert, inspector, or subwindow.
 ///
 /// - [open]: Indicates that the dialog is active and can be interacted with. When the open attribute is not set, the dialog shouldn't be shown to the user.
-class Dialog extends DomComponent {
+class Dialog extends StaticDomComponent {
   Dialog(List<Component> children,
       {bool? open,
       Key? key,
@@ -53,7 +53,7 @@ class Dialog extends DomComponent {
 }
 
 /// The &lt;summary&gt; HTML element specifies a summary, caption, or legend for a &lt;details&gt; element's disclosure box. Clicking the &lt;summary&gt; element toggles the state of the parent &lt;details&gt; element open and closed.
-class Summary extends DomComponent {
+class Summary extends StaticDomComponent {
   Summary(List<Component> children,
       {Key? key,
       IdAttr? id,
@@ -78,7 +78,7 @@ class Summary extends DomComponent {
 /// - [rel]: This attribute names a relationship of the linked document to the current document. The attribute must be a space-separated list of link type values.
 /// - [type]: This attribute is used to define the type of the content linked to. The value of the attribute should be a MIME type such as text/html, text/css, and so on. The common use of this attribute is to define the type of stylesheet being referenced (such as text/css), but given that CSS is the only stylesheet language used on the web, not only is it possible to omit the type attribute, but is actually now recommended practice. It is also used on rel="preload" link types, to make sure the browser only downloads file types that it supports.
 /// - [as]: This attribute is only used when rel="preload" or rel="prefetch" has been set on the &lt;link&gt; element. It specifies the type of content being loaded by the &lt;link&gt;, which is necessary for request matching, application of correct content security policy, and setting of correct Accept request header. Furthermore, rel="preload" uses this as a signal for request prioritization.
-class Link extends DomComponent {
+class Link extends StaticDomComponent {
   Link(
       {required HrefAttr href,
       String? rel,
@@ -121,7 +121,7 @@ class Link extends DomComponent {
 ///
 ///   This attribute allows the elimination of parser-blocking JavaScript where the browser would have to load and evaluate scripts before continuing to parse. async has a similar effect in this case.
 /// - [src]: This attribute specifies the URI of an external script; this can be used as an alternative to embedding a script directly within a document.
-class Script extends DomComponent {
+class Script extends StaticDomComponent {
   Script(List<Component> children,
       {bool? async,
       bool? defer,

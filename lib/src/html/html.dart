@@ -1,4 +1,5 @@
 import 'package:jaspr/jaspr.dart';
+import 'package:jaspr_wrapper/src/static_component.dart';
 
 import '../attr.dart';
 
