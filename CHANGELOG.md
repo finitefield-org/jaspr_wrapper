@@ -13,3 +13,6 @@
 
 ## 0.5.0
 - Do not generate file if there is no attributes.
+
+## 0.6.0
+- Add StaticComponent
